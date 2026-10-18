@@ -11,7 +11,7 @@ public record PhoneRequestDto(
         @NotBlank(message = "City code is required")
         @Size(max = 3, min = 1, message = "City code must have between 1 and 3 characters")
         String cityCode,
-        @NotBlank(message = "Country code is required")
+        @NotBlank(message = "Country code must have between 1 and 3 characters")
         @Size(max = 3, min = 1, message = "Country code must have between 1 and 3 characters")
         String countryCode
 ) {

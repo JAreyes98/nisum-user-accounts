@@ -25,7 +25,7 @@ public class Phone extends AuditModel implements Serializable {
     @Column(name = "citycode", length = 5)
     private String cityCode;
 
-    @Column(name = "countryCode", length = 3)
+    @Column(name = "countrycode", length = 3)
     private String countryCode;
 
     @ManyToOne(fetch = FetchType.LAZY)

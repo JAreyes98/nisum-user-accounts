@@ -149,7 +149,7 @@ public class UserPhoneServiceImpl implements UserPhoneService {
     private Phone getPhoneByUserAndPhoneId(String userId, String phoneId) {
         return phoneRepository.findByIdAndUserId(phoneId, userId)
                 .orElseThrow(() -> new ResourceNotFoundException(
-                        String.format("User with Id: %s was not found", userId))
+                        String.format("User with Id and Phone id %s: %s was not found", userId, phoneId))
                 );
     }
 }

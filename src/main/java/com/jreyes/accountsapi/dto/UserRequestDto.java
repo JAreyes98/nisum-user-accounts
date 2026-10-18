@@ -1,5 +1,6 @@
 package com.jreyes.accountsapi.dto;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -22,6 +23,7 @@ public record UserRequestDto(
                 message = "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character (@#$%^&+=!._-)"
         )
         String password,
+        @Valid
         List<PhoneRequestDto> phones
 ) {
 }

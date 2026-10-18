@@ -3,7 +3,7 @@ spring:
     name: accountsapi
 
   datasource:
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;NON_KEYWORDS=USER
+    url: jdbc:h2:mem:testdb_${random.uuid};DB_CLOSE_DELAY=0;NON_KEYWORDS=USER
     driver-class-name: org.h2.Driver
     username: sa
     password: password
@@ -13,6 +13,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
 
   h2:
     console:
@@ -23,9 +27,6 @@ server:
   servlet:
     context-path: /account/api
 
-#  sql:
-#    init:
-#      mode: always
 
 app:
   secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
