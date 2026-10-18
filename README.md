@@ -44,10 +44,6 @@ Key Highlights:
 
 ---
 
-## Endpoint Testing Guide
-
-Base URL: http://localhost:8080/account/api
-
 ### 1. Register User (Public)
 Creates a user and returns a JWT token.
 
@@ -160,3 +156,19 @@ Response: 200 OK
 DELETE /users/{userId}/phones/{id}
 Headers: Authorization: Bearer <TOKEN>
 Response: 204 No Content
+
+
+
+## Endpoint Testing Guide
+
+Base URL: http://localhost:8080/account/api
+
+## Unit Test and Integration Test
+### 1. Test architecture
+![Diagram](./testDiagram.png)
+
+### 2. Run Test
+`./mvnw clean test`
+
+## Diagram
+![Diagram](./diagram.png)
